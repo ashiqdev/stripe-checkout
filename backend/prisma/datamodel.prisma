@@ -1,0 +1,16 @@
+type User {
+  id: ID! @id
+  email: String! @unique
+  password: String!
+  name: String!
+  emailVerified: Boolean @default(value: false)
+  emailToken: String
+  emailTokenExpiry: Float
+  resetToken: String
+  resetTokenExpiry: Float
+  stripeId: String
+  type: String @default(value: "free-trial")
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+
+}
